@@ -1,0 +1,368 @@
+@media screen and (max-width: 400px) {
+  .contentSmall {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.pageTitle, .landingPage, .imgSide, nav, .theNav, .myDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.imgSide, .pageTitle, nav {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.myDetails {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  background: #ccc;
+}
+
+.homePage {
+  display: -ms-grid;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  width: 100%;
+}
+
+.theNav {
+  z-index: 2;
+}
+
+.pageTitle {
+  bottom: 140px;
+  position: absolute;
+  top: 10vh;
+  height: 50px;
+  margin: 0 auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 100%;
+  z-index: 3;
+}
+
+.pageTitle h1 {
+  color: white;
+  font-weight: 400;
+}
+
+.landingPage {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 86vh;
+  width: 86vw;
+  background: #0a78a3;
+  color: black;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.curved::before, .curved::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  bottom: 25px;
+  width: 50%;
+  left: 10px;
+  top: 80%;
+  background: #777;
+  -webkit-box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.6);
+  -webkit-transform: rotate(-8deg);
+          transform: rotate(-8deg);
+}
+
+.curved:after {
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+.myDetails {
+  text-align: justify;
+  padding: 30px;
+  line-height: 32px;
+  font-size: 1.2rem;
+}
+
+.myDetails h2 {
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.6);
+  padding: 3px;
+}
+
+.myDetails p {
+  font-weight: 200;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contentLarge {
+  display: none;
+}
+
+.stroke {
+  font-weight: 100;
+  color: black;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+h2.myName, h2.myJob {
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2.myJob {
+  font-size: 1.4rem;
+}
+
+img {
+  height: 160px;
+  width: 160px;
+}
+
+.myImg {
+  border-radius: 50%;
+}
+
+.imgSide {
+  margin-top: 80px;
+}
+
+.imgSide .myName, .imgSide .myJob {
+  display: none;
+}
+
+nav {
+  height: 100%;
+  width: 100%;
+  background: rgba(10, 120, 163, 0.85);
+  position: absolute;
+  top: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.fa-bars {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.menuButton, .checkButton {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.checkButton {
+  height: 40px;
+  width: 40px;
+  right: 12px;
+  top: 6px;
+  opacity: 0;
+  z-index: 4;
+}
+
+.checkButton:checked ~ nav {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+ul.theLinks li {
+  list-style: none;
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+ul.theLinks li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 999.98px) and (min-width: 700px) {
+  .fa-bars, .checkButton {
+    display: none;
+  }
+  nav {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background: rgba(0, 0, 0, 0);
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    margin-left: -50px;
+  }
+  .theNav ul {
+    bottom: 5px;
+    position: absolute;
+  }
+  .theNav ul li {
+    display: inline-block;
+  }
+  .landingPage {
+    padding: 50px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .landingPage .imgSide {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .landingPage .myDetails {
+    -webkit-box-flex: 1.5;
+        -ms-flex: 1.5;
+            flex: 1.5;
+  }
+  .imgSide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0px;
+  }
+  .myDetails .myJob, .myDetails .myName {
+    display: none;
+  }
+  .imgSide .myName, .imgSide .myJob {
+    display: block;
+  }
+  .imgSide h2.myName {
+    font-size: 1.4rem;
+  }
+  .imgSide h2.myJob {
+    font-size: .8rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .fa-bars, .checkButton {
+    display: none;
+  }
+  .myDetails {
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  nav {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background: rgba(0, 0, 0, 0);
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    margin-left: -50px;
+  }
+  .theNav ul {
+    bottom: 5px;
+    position: absolute;
+  }
+  .theNav ul li {
+    display: inline-block;
+  }
+  .contentLarge {
+    display: block;
+  }
+  .landingPage {
+    padding: 50px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .landingPage .imgSide {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .landingPage .myDetails {
+    -webkit-box-flex: 1.5;
+        -ms-flex: 1.5;
+            flex: 1.5;
+  }
+  .imgSide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0px;
+  }
+  .myDetails .myJob, .myDetails .myName {
+    display: none;
+  }
+  .imgSide .myName, .imgSide .myJob {
+    display: block;
+  }
+  .curved::before, .curved::after {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  .curved:after {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .imgSide h2.myName {
+    font-size: 1.4rem;
+  }
+  .imgSide h2.myJob {
+    font-size: .8rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 699.98px) and (max-height: 550px) {
+  .contentSmall {
+    display: none;
+  }
+}

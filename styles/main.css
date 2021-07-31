@@ -1,0 +1,197 @@
+@media screen and (max-width: 400px) {
+  .contentSmall {
+    display: none;
+  }
+}
+
+.innerKnowme, .portforlioContent, footer, .divOne, .linkedIn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.innerKnowme, .divOne {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#mainContent {
+  width: 86vw;
+  margin: 0 auto;
+  background: #ccc;
+}
+
+section {
+  min-height: 30vh;
+  padding: 30px 0px;
+  text-align: justify;
+}
+
+section p {
+  font-weight: 100;
+  line-height: 33px;
+}
+
+section > div > h1 {
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 2rem;
+  color: #42425a;
+}
+
+.spanProfile {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+#knowme p {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.innerKnowme h1 {
+  position: relative;
+}
+
+.innerKnowme h1:after, .innerPortfolio h1:after, .letsTalkH1 h1:after {
+  content: "";
+  height: 100%;
+  width: 100px;
+  border-bottom: 1px solid rgba(141, 135, 135, 0.75);
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+}
+
+.menuButton, .checkButton {
+  top: 15px;
+  right: 40px;
+}
+
+.innerKnowme h3 {
+  font-weight: 500;
+  text-align: center;
+  margin: 30px 0 0 0;
+  text-shadow: 0 1px 0px rgba(255, 255, 255, 0.5);
+}
+
+.portforlioContent, footer, .divOne, .linkedIn {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.portforlioContent, footer, .divOne {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portforlioContent {
+  min-height: 20vh;
+}
+
+img.imgLink {
+  min-height: 300px;
+  min-width: 300px;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+img.imgLink:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.linkedInImg {
+  border-radius: 3%;
+  margin-bottom: 25px;
+}
+
+.letstalk {
+  min-height: 50vh;
+}
+
+.letstalkInner p {
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 400;
+}
+
+#address .icons, #emailAddress .icons,
+#phoneNumber .icons, #github .icons {
+  margin-bottom: -5px;
+  color: black;
+  text-shadow: 0px 2px 4px white;
+  text-align: center;
+  font-size: 1.45rem;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+#address .icons:hover, #emailAddress .icons:hover,
+#phoneNumber .icons:hover, #github .icons:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+footer {
+  min-height: 10vh;
+  background: black;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.linkedIn {
+  margin-top: 15px;
+}
+
+#github p a {
+  text-decoration: none;
+}
+
+.letsTalkDetails p, .letsTalkDetails #github p a {
+  text-align: center;
+  font-size: 1.2rem;
+  color: black;
+  text-shadow: 0px 2px 4px white;
+  -webkit-transition: all 700ms ease;
+  transition: all 700ms ease;
+}
+
+.letsTalkDetails #github p a:hover {
+  font-size: 1.17rem;
+}
+
+#address, #emailAddress, #phoneNumber {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 850px) {
+  .divOne {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .profile, .creativity {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0 20px;
+  }
+  .myDetails {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
