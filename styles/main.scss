@@ -4,6 +4,14 @@
     }
 }
 
+.theTags::after{
+    content: "/>";
+}
+
+.theTags::before{
+    content: "<";
+}
+
 .innerKnowme, .portforlioContent, footer, .divOne, .linkedIn{
     display: flex;
 }

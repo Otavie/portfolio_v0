@@ -12,6 +12,14 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+.theTags::after {
+  content: "/>";
+}
+
+.theTags::before {
+  content: "<";
+}
+
 .pageTitle, .landingPage, .imgSide, nav, .theNav, .myDetails {
   display: -webkit-box;
   display: -ms-flexbox;
